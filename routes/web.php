@@ -10,7 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
+
+
+
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('posts', 'PostController');
+
+Route::prefix('admin')->group(function (){
+    Route::get('/', 'AdminController@index')->name('admin');
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+
 });

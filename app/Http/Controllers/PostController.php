@@ -28,7 +28,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+
+
+        return view('posts.edit');
     }
 
     /**
@@ -43,12 +45,10 @@ class PostController extends Controller
             'title'=> 'required',
             'description'=>'required'
         ));
-
         $post = new Post;
         $post->user_id = Auth::user()->id;
         $post->title = $request->title;
         $post->description = $request->description;
-
         $post->save();
 
         Session::flash('success','The post was save!');
@@ -80,9 +80,7 @@ class PostController extends Controller
     public function edit($id)
     {
        $post = Post::find($id);
-
-
-        return view('posts.edit')->withPost($post);
+       return view('posts.edit')->withPost($post);
     }
 
     /**
@@ -100,13 +98,13 @@ class PostController extends Controller
         ));
 
         $post = Post::find($id);
-//        dd($post);
 
-        $post['title'] = $request->input('title');
-        $post['description'] = $request->input('description');
+//        $post['title'] = $request->input('title');
+//        $post['description'] = $request->input('description');
+        $post->update($request->all());
 
         $post->save();
-        Session::flash('success','This post was saved!');
+        Session::flash('success','This post was updated!');
 
        return redirect()->route('posts.show', $post->id);
 

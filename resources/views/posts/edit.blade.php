@@ -3,51 +3,56 @@
 @section('content')
 
     <hr>
+    @if(!isset($post->id))
+        <form action="{{route('posts.store')}}" method="post" class="form-horizontal">
 
-    <form method="post" action="/posts/{{$post->id}}">
-{{csrf_field()}}
-        {{method_field('PUT')}}
-        <div class="col-md-8">
-            <label class="control-label">Title:</label>
-            <div class="controls">
-                <input type="text" name="title" id="title"
-                       value="{{$post->title}}"/>
-                <span class="help-block"></span>
-                <h1></h1>
-                <label class="control-label">Description:</label>
-                <div class="controls">
-                    <input type="text" name="description" id="description"
-                           value="{{$post->description}}"/>
-                </div>
+            @else
+                <form method="post" action="/posts/{{$post->id}}">
+                    {{method_field('PUT')}}
 
-            </div>
-            <div class="col-md-4">
-                <div class="well">
-                    <dl class="dl-horizontal">
-                        <dt>Create at</dt>
-                        <dd>{{date( 'M j, Y H:i', strtotime($post->created_at)) }}</dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                        <dt>Last update:</dt>
-                        <dd>{{date( 'M j, Y H:i', strtotime($post->updated_at)) }}</dd>
-                    </dl>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <a href="{{route('posts.show', $post->id)}}" class="btn btn-danger btn-block">Cancel</a>
-                        </div>
-                        <div class="col-sm-6">
-                            <button type="submit" class="btn btn-success btn-block">
+                    @endif
+                    {{csrf_field()}}
 
-                                Save
+                    <div class="col-md-8">
+                        <label class="control-label">Title:</label>
+                        <div class="controls">
+                            <input type="text" name="title" id="title"
+                                   value="{{old('title', isset($post->title)?$post->title:null)}}"/>
+                            <span class="help-block"></span>
+                            <h1></h1>
+                            <label class="control-label">Description:</label>
+                            <div class="controls">
+                                <input type="text" name="description" id="description"
+                                       value="{{old('description', isset($post->description)?$post->description:null)}}"/>
 
-                            </button>
+                            </div>
 
                         </div>
+                        <div class="col-md-4">
+                            <div class="well">
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <a href="{{route('posts.index')}}" class="btn btn-danger btn-block">Cancel</a>
+                                    </div>
+                                    <div class="col-sm-6">
 
+                                        @if(isset($id))
+                                            <button type="submit" class="btn btn-success btn-block">
+                                                Create
+                                            </button>
+                                        @else
+                                            <button type="submit" class="btn btn-success btn-block">
+                                                Update
+                                            </button>
+                                        @endif
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </form>
-@stop
+                </form>
+        </form>
+
+@endsection

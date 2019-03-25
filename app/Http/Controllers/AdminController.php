@@ -25,7 +25,6 @@ class AdminController extends Controller
     public function index()
     {
         $post = Post::all();
-
         return view('admin')->withPost($post);
     }
 }

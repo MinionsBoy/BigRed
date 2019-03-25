@@ -207,12 +207,23 @@
                         <div class="todo">
                             <ul>
 
-                                @foreach($posts as $post)
+                                @foreach($post as $posts)
                                     <li class="clearfix">
-                                        <div class="article-post"> <span class="user-info"> By user № {{$post->user_id}} / Date: {{date( 'M j, Y H:i', strtotime($post->created_at)) }} / Time:09:27 AM </span>
-                                            <p><a href="{{route('posts.show', $post->id)}}">{{$post->title}}</a> </p>
+                                        <div class="article-post"> <span class="user-info"> By user № {{$posts->user_id}} / Date: {{date( 'M j, Y H:i', strtotime($posts->created_at)) }} / Time:09:27 AM </span>
+                                            <p><a href="{{route('posts.show', $posts->id)}}">{{$posts->title}}</a> </p>
                                         </div>
-                                        <td>{{substr($post->description, 0, 15)}}{{ strlen($post->description)>15 ? "...": ""}}</td><a class="tip" href="{{route('posts.destroy')}}" title="Delete"><i class="icon-remove"></i></a>
+                                        <td>{{substr($posts->description, 0, 15)}}{{ strlen($posts->description)>15 ? "...": ""}}</td>
+
+                                        <form action="{{url('posts/'.$posts->id)}}" method="POST">
+                                            {{csrf_field()}}
+                                            {{method_field('DELETE')}}
+
+                                            <button class="btn-mini">
+
+                                                Delete
+                                            </button>
+                                        </form>
+
                                     </li>
                                 @endforeach
 

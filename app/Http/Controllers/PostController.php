@@ -125,6 +125,6 @@ class PostController extends Controller
 
         Session::flash('success','The post was deleted!');
 
-        return redirect()->route('home');
+        return redirect()->back();
     }
 }

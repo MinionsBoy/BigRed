@@ -26,6 +26,15 @@
                                        value="{{old('description', isset($post->description)?$post->description:null)}}"/>
 
                             </div>
+                            <div class="widget-content">
+                                <div class="control-group">
+                                    <form>
+                                        <div class="controls">
+                                            <textarea class="textarea_editor span12" rows="6" placeholder="Enter text ..."></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
 
                         </div>
                         <div class="col-md-4">

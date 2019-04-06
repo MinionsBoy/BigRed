@@ -24,7 +24,14 @@ class AdminController extends Controller
      */
     public function index()
     {
+        return view('admin');
+    }
+
+    public function posts(){
+
         $post = Post::all();
-        return view('admin')->withPost($post);
+
+        return view('admin.tables')->withPost($post);
+
     }
 }

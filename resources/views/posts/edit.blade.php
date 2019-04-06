@@ -15,27 +15,17 @@
 
                     <div class="col-md-8">
                         <label class="control-label">Title:</label>
-                        <div class="controls">
+                        <div class="controls span6">
                             <input type="text" name="title" id="title"
                                    value="{{old('title', isset($post->title)?$post->title:null)}}"/>
                             <span class="help-block"></span>
                             <h1></h1>
                             <label class="control-label">Description:</label>
                             <div class="controls">
-                                <input type="text" name="description" id="description"
-                                       value="{{old('description', isset($post->description)?$post->description:null)}}"/>
+                                <textarea name="description" id="description"
+                                       >{{old('description', isset($post->description)?$post->description:null)}}</textarea>
 
                             </div>
-                            <div class="widget-content">
-                                <div class="control-group">
-                                    <form>
-                                        <div class="controls">
-                                            <textarea class="textarea_editor span12" rows="6" placeholder="Enter text ..."></textarea>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-
                         </div>
                         <div class="col-md-4">
                             <div class="well">
@@ -46,13 +36,14 @@
                                     </div>
                                     <div class="col-sm-6">
 
-                                        @if(isset($id))
-                                            <button type="submit" class="btn btn-success btn-block">
-                                                Create
-                                            </button>
-                                        @else
+                                        @if(isset($post->id))
                                             <button type="submit" class="btn btn-success btn-block">
                                                 Update
+                                            </button>
+                                        @else
+
+                                            <button type="submit" class="btn btn-success btn-block">
+                                                Create
                                             </button>
                                         @endif
                                     </div>

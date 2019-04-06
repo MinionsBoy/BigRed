@@ -68,7 +68,7 @@
         <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
         <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
         <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
-        <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
+        <li><a href="{{route('admin.posts')}}"><i class="icon icon-th"></i> <span>Tables</span></a></li>
         <li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Full width</span></a></li>
         <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Forms</span> <span class="label label-important">3</span></a>
             <ul>
@@ -129,7 +129,7 @@
                 <li class="bg_lb"> <a href="index.html"> <i class="icon-dashboard"></i> <span class="label label-important">20</span> My Dashboard </a> </li>
                 <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Charts</a> </li>
                 <li class="bg_ly"> <a href="widgets.html"> <i class="icon-inbox"></i><span class="label label-success">101</span> Widgets </a> </li>
-                <li class="bg_lo"> <a href="tables.html"> <i class="icon-th"></i> Tables</a> </li>
+                <li class="bg_lo"> <a href="{{route('admin.posts')}}"> <i class="icon-th"></i> Tables</a> </li>
                 <li class="bg_ls"> <a href="grid.html"> <i class="icon-fullscreen"></i> Full width</a> </li>
                 <li class="bg_lo span3"> <a href="form-common.html"> <i class="icon-th-list"></i> Forms</a> </li>
                 <li class="bg_ls"> <a href="buttons.html"> <i class="icon-tint"></i> Buttons</a> </li>
@@ -202,51 +202,6 @@
                 <div class="widget-box">
                     <div class="widget-title"> <span class="icon"><i class="icon-ok"></i></span>
                         <h5>To Do list</h5>
-                    </div>
-                    <div class="widget-content">
-                        <div class="todo">
-                            <ul>
-
-                                @foreach($post as $posts)
-                                    <li>
-                                        <div class="article-post"> <span class="user-info"> By user № {{$posts->user_id}} / Date: {{date( 'M j, Y H:i', strtotime($posts->created_at)) }} </span>
-                                            <p><a href="{{route('posts.show', $posts->id)}}">{{$posts->title}}</a> </p>
-                                        </div>
-                                        <td>{{substr($posts->description, 0, 15)}}{{ strlen($posts->description)>30 ? "...": ""}}</td>
-
-                                        <form action="{{url('posts/'.$posts->id)}}" method="POST">
-                                            {{csrf_field()}}
-                                            {{method_field('DELETE')}}
-                                            <button class="btn-danger">
-                                                Delete
-                                            </button>
-                                        </form>
-
-                                    </li>
-                                @endforeach
-
-                                <li class="clearfix">
-                                    <div class="txt"> Luanch This theme on Themeforest <span class="by label">Alex</span></div>
-                                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="txt"> Manage Pending Orders <span class="date badge badge-warning">Today</span> </div>
-                                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="txt"> MAke your desk clean <span class="by label">Admin</span></div>
-                                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="txt"> Today we celebrate the theme <span class="date badge badge-info">08.03.2013</span> </div>
-                                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="txt"> Manage all the orders <span class="date badge badge-important">12.03.2013</span> </div>
-                                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <div class="widget-box">

@@ -1,10 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
+    <hr>
+
     @if(count($posts)>0)
                 <div class="row">
                     <div class="span12">
                         <div class="widget-box">
+                            <a href="{{route('posts.create')}}" class="btn btn-icon-pg btn-success">New post</a>
                             <div class="widget-title">
                                 <h1>Posts</h1>
                             </div>
@@ -18,11 +22,10 @@
                                             </div>
                                             <div class="article-post">
                                                 <div class="fr">
-                                                    <a href="{{route('posts.create')}}" class="btn-mini btn-icon-pg btn-success">New post</a>
                                                     <a href="{{route('posts.show', $post->id)}}" class="btn-mini btn-primary btn-icon-pg"> Show</a>
 
                                                 </div>
-                                                <span class="user-info"> By user № {{$post->user_id}} / Date: {{date( 'M j, Y H:i', strtotime($post->created_at)) }} </span>
+                                                <span class="user-info"> By user {{$post->user_id}} / Date: {{date( 'M j, Y H:i', strtotime($post->created_at)) }} </span>
                                                 <p>{{$post->title}}</p>
                                             </div>
                                             <td>{{substr($post->description, 0, 15)}}{{ strlen($post->description)>30 ? "...": ""}}</td>

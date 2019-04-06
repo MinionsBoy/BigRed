@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ URL::to('css/profile.css') }}" crossorigin="anonymous" defer>

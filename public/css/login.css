@@ -1,0 +1,140 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,400);
+.text-primary{
+    color: #465262 !important;
+}
+html{
+    height:100%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to top, rgba(243, 248, 250, 0.7), rgba(70, 82, 98, 0.8));
+    height:100%;
+    padding-top:10%;
+
+}
+.box{
+    background: #ffffff;
+    border:1px solid #ddd;
+    width:400px;
+    text-align:center;
+    border-top:5px solid #ffa726;
+    margin:auto;
+}
+.box1{
+    padding:20px 20px;
+}
+.box img{
+    margin-top:10px;
+    margin-bottom:5px;
+    margin:auto;
+}
+.box h3{
+    margin-top:0;
+}
+input{
+    border-radius:0 !important;
+}
+input[type="submit"]{
+    margin-bottom:10px;
+    border:none;
+}
+.btn-primary{
+    background-color: #ffa726 !important;
+    border-color: #ddd;
+}
+.bg-light{
+    background:#ddd;
+    width:100%;
+    padding-top:8px;
+    padding-bottom:8px;
+}
+.checkbox label{
+    padding-left:0;
+}
+
+.animation{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    40% {
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    40% {
+        transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+        transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+.flipInX {
+    -webkit-backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    backface-visibility: visible !important;
+    animation-name: flipInX;
+}
+
+body{
+    background-image: url(/images/test.png);
+    -webkit-animation:100s scroll infinite linear;
+    -moz-animation:100s scroll infinite linear;
+    -o-animation:100s scroll infinite linear;
+    -ms-animation:100s scroll infinite linear;
+    animation:100s scroll infinite linear;
+}
+
+@-webkit-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@-moz-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@-o-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@-ms-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}

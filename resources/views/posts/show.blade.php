@@ -1,17 +1,14 @@
 
 @extends('layouts.app')
-
 @section('content')
+    <div class="customoverlay">
+        <div class="container">
 
-    <hr>
+            <div class="row" style="margin-top: 100px; margin-bottom: 20px">
 
-<div class="col-md-8">
-    <h1>{{ $post->title }}</h1>
-    <p class="lead">{{$post->description}}</p>
-
-</div>
-    <div class="col-md-4">
         <div class="well">
+            <h1>{{ $post->title }}</h1>
+            <p class="lead">{{$post->description}}</p>
             <dl class="dl-horizontal">
                 <dt>Create at</dt>
                 <dd>{{date( 'M j, Y H:i', strtotime($post->created_at)) }}</dd>
@@ -39,5 +36,6 @@
             </div>
         </div>
     </div>
-
+        </div>
+    </div>
     @endsection

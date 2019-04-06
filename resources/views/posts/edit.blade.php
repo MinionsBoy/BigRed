@@ -2,7 +2,19 @@
 
 @section('content')
 
-    <hr>
+    <div class="customoverlay">
+        <div class="container">
+            <div class="row" style="margin-top: 100px; margin-bottom: 20px">
+                <h2 class="create-comp-title">Create own post</h2><br>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
     @if(!isset($post->id))
         <form action="{{route('posts.store')}}" method="post" class="form-horizontal">
 
@@ -12,21 +24,22 @@
 
                     @endif
                     {{csrf_field()}}
+                    <h4 class="col-sm-12">Title</h4>
 
-                    <div class="col-md-8">
-                        <label class="control-label">Title:</label>
-                        <div class="controls span6">
-                            <input type="text" name="title" id="title"
-                                   value="{{old('title', isset($post->title)?$post->title:null)}}"/>
-                            <span class="help-block"></span>
-                            <h1></h1>
-                            <label class="control-label">Description:</label>
-                            <div class="controls">
-                                <textarea name="description" id="description"
-                                       >{{old('description', isset($post->description)?$post->description:null)}}</textarea>
-
-                            </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" id="title" name="title"
+                                   value="{{old('title', isset($post->title)?$post->title:null)}}">
                         </div>
+                    </div>
+                    <h4 class="col-sm-12">Description</h4>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                        <textarea class="form-control" id="description" name="description" rows="3">{{old('description', isset($post->description)?$post->description:null)}}
+                        </textarea>
+                        </div>
+                    </div><br>
+
                         <div class="col-md-4">
                             <div class="well">
                                 <hr>
@@ -37,12 +50,12 @@
                                     <div class="col-sm-6">
 
                                         @if(isset($post->id))
-                                            <button type="submit" class="btn btn-success btn-block">
+                                            <button type="submit" class="btn btn-primary mb-5 mt-2">
                                                 Update
                                             </button>
                                         @else
 
-                                            <button type="submit" class="btn btn-success btn-block">
+                                            <button type="submit" class="btn btn-primary mb-5 mt-2">
                                                 Create
                                             </button>
                                         @endif
@@ -54,5 +67,6 @@
                     </div>
                 </form>
         </form>
-
+        </div>
+    </div>
 @endsection

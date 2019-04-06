@@ -1,0 +1,224 @@
+footer{
+    background-color:#E8E8E8;
+    padding: 0px 0px;
+    margin-top: 50px;
+    font-family: 'Xolonium', sans-serif;
+    -moz-box-shadow: 0 -5px 11px #cccccc;
+    -webkit-box-shadow: 0 -5px 11px #cccccc;
+    box-shadow: 0 -5px 11px #cccccc;
+}
+
+.adress span , .menu span{
+    color: #000;
+    font-weight: 700;
+    border-bottom: 1px solid #c7c7c7;
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.adress , .menu{
+    list-style: none;
+    padding:0px 0px;
+}
+
+.adress li , .menu li{
+    margin:10px 0px;
+}
+
+.adress li a , .menu li a{
+    color:#000;
+    text-decoration:none;
+    font-size:16px;
+}
+
+#icons .fa{
+    font-size:25px;
+    color: #3d6c8a;
+}
+
+.btn-large{
+    background:#3d6c8a;
+    border:none;
+    color:#FFF;
+    height: 45px;
+    width:40%;
+}
+
+.links {
+    *zoom: 1;
+    font-size: 15px;
+    margin-top: -1px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+.links:before, .links:after {
+    content: "";
+    display: table;
+}
+.links:after {
+    clear: both;
+}
+
+.link-effect-3 a {
+    padding: 3px 0;
+    margin: 0 20px;
+    color: #303030;
+    text-shadow: none;
+    position: relative;
+}
+.link-effect-3 a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 3px 0;
+    max-width: 0;
+    border-bottom: 2px solid #000;
+    color: #000;
+    content: attr(data-hover);
+    -webkit-transition: max-width 0.5s;
+    -moz-transition: max-width 0.5s;
+    transition: max-width 0.5s;
+}
+.link-effect-3 a:hover::before {
+    max-width: 100%;
+}
+
+body .zocial {
+    width: 160px;
+    height: 38px;
+    margin: 13px 5px;
+    font-size: 13px;
+}
+
+h2 .footer {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 1em 0 0.75em;
+    border-bottom: 1px solid #000;
+}
+
+.zocial,
+a.zocial {
+    border: 1px solid #777;
+    border-color: rgba(0,0,0,0.2);
+    border-bottom-color: #333;
+    border-bottom-color: rgba(0,0,0,0.4);
+    color: #fff;
+    box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.4), inset 0 0 0.1em rgba(255,255,255,0.9);
+    cursor: pointer;
+    display: inline-block;
+    font: bold 100%/2.1 "Lucida Grande", Tahoma, sans-serif;
+    font-family: 'Xolonium', sans-serif;
+    padding: 0 .98em 0 0;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    white-space: nowrap;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    position: relative;
+    border-radius: .3em;
+}
+
+.zocial:before {
+    content: "";
+    border-right: 0.075em solid rgba(0,0,0,0.1);
+    float: left;
+    font: 120%/1.8 zocial;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0 0.5em 0 0;
+    padding: 0 0.5em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.zocial:active {
+    outline: none;
+}
+
+.zocial {
+    background-image: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));
+}
+
+.zocial:hover, .zocial:focus {
+    background-image: linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));
+}
+
+.zocial:active {
+    background-image: linear-gradient(bottom, rgba(255,255,255,.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,.1));
+}
+
+.zocial.gmail,
+.zocial.posterous{
+    border: 1px solid #aaa;
+    border-color: rgba(0,0,0,0.3);
+    border-bottom-color: #777;
+    border-bottom-color: rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+    -webkit-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+    box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.zocial.twitter:focus,
+.zocial.gmail:focus,
+.zocial.gmail:hover,
+.zocial.posterous:focus,
+.zocial.posterous:hover{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.5)), color-stop(49%, rgba(255,255,255,0.2)), color-stop(51%, rgba(0,0,0,0.05)), to(rgba(0,0,0,0.15)));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+    background-image: linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+}
+
+.zocial.gmail:active,
+.zocial.posterous:active{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), color-stop(30%, rgba(255,255,255,0)), color-stop(50%, rgba(0,0,0,0)), to(rgba(0,0,0,0.1)));
+    background-image: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));
+    background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));
+    background-image: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));
+    background-image: -ms-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));
+    background-image: linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));
+}
+
+.zocial.twitter:before {content: "T";}
+.zocial.posterous:before {font-size: 20px; content: "P";}
+.zocial.gmail:before {font-size: 18px; content: "@"; color: #f00;}
+.zocial.facebook:before {content: "f";}
+.zocial.android:before {content: "&";}
+.zocial.googleplus:before {content: "+";}
+.zocial.instagram:before {content: "\00DC";}
+.zocial.linkedin:before {content: "L";}
+.zocial.youtube:before {content: "U";}
+
+.zocial.twitter {background-color: #46c0fb;}
+.zocial.posterous {line-height: 35px; font-size: 13px; background-color: #ffd959; color: #3f729b;}
+.zocial.gmail {line-height: 35px; font-size: 13px; background-color: #efefef; color: #222;}
+.zocial.android {background-color: #a4c639;}
+.zocial.facebook {background-color: #4863ae;}
+.zocial.googleplus {background-color: #dd4b39;}
+.zocial.instagram {background-color: #3f729b;}
+.zocial.linkedin {background-color: #0083a8;}
+.zocial.youtube {background-color: #f00;}
+
+@font-face {
+    font-family: Xolonium;
+    src: url(../fonts/111.otf);
+}

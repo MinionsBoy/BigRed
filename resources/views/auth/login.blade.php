@@ -1,4 +1,9 @@
-@extends('layouts.app')
+@extends('clearapp')
+
+@section('style')
+    @parent
+    @include('layouts.loginStyle')
+@endsection
 
 @section('content')
     <div class="container">

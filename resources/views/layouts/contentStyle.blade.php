@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ URL::to('css/contentstyle.css') }}" crossorigin="anonymous" defer>

@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ URL::to('css/footerstyle.css') }}" crossorigin="anonymous" defer>

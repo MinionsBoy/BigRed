@@ -1,0 +1,17 @@
+.user-avatar{
+  width:300px;
+  height:300px;
+  float:left;
+  border-radius:50%;
+}
+.user-name{
+  font-size: 40px;
+  font-family: "Xolonium";
+  text-align: center;
+
+}
+.user-email{
+  font-size: 30px;
+  font-family: "Xolonium";
+  text-align: center;
+}

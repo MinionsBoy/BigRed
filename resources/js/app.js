@@ -31,3 +31,18 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app'
 });
+
+
+require('./bootstrap');
+window.Vue = require('vue');
+
+import store from './store/index'
+
+Vue.component('searchbar', require('./components/Searchbar'));
+Vue.component('post', require('./components/Post'));
+Vue.component('posts', require('./components/Posts'));
+
+const app = new Vue({
+    el: '#app',
+    store
+});

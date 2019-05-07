@@ -27,7 +27,7 @@
     <ul class="nav">
         <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome mr.Admin</span><b class="caret"></b></a>
             <ul class="dropdown-menu">
-                <li><a href="{{route('admin.index')}}"><i class="icon-user"></i> My Profile</a></li>
+                <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
                 <li class="divider"></li>
                 <li><a href="{{ route('posts.index') }}"><i class="icon-check"></i> Posts</a></li>
                 <li class="divider"></li>
@@ -65,7 +65,7 @@
 <!--sidebar-menu-->
 <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
     <ul>
-        <li class="active"><a href="{{route('admin.index')}}"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+        <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
         <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
         <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
         <li><a href="{{route('admin.posts')}}"><i class="icon icon-th"></i> <span>Tables</span></a></li>

@@ -17,7 +17,7 @@
             post
         },
         mounted() {
-            this.$store.dispatch('GET_POSTS')
+            this.$store.dispatch('GET_POSTS');
 
             window.Echo.channel('search')
                 .listen('.searchResults', (e) => {

@@ -17,11 +17,11 @@ use Illuminate\Http\Request;
 Auth::routes();
 
 
-Route::get('/search', 'PostController@search');
-Route::get('/get', 'PostController@get');
+Route::get('search', 'PostController@search');
+Route::get('get', 'PostController@get');
 
 Route::get('/', function () {
-    return view('posts.posts');
+    return view('search');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

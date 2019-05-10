@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    @include('posts.config')
     <div style="height: 75px; background-color: rgba(70, 82, 98, 0.8);"></div>
     <section id="solution"
              style="background: url(http://commonpixel.com/themes/edgar/images/examples/bg_parallax_05.jpg) no-repeat 50% 50% / cover fixed;">
@@ -12,7 +11,8 @@
 
                     <button onclick="myFunction()" class="dropbtn button primary large">Search</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <input class="effect-4" type="text" placeholder="Search" id="myInput" onkeyup="filterFunction()">
+                        <input class="effect-4" type="text" placeholder="Search" id="myInput"
+                               onkeyup="filterFunction()">
                         {{--<input type="text" placeholder="Search.." >--}}
 
                         @foreach($posts as $post)
@@ -32,21 +32,19 @@
                     </div>
 
                 </div>
-                    @foreach($posts as $post)
-                        <div class="col-md-12">
-                            <div class="container">
-                                @include('includes.post_card')
+                @foreach($posts as $post)
+                    <div class="col-md-12">
+                        <div class="container">
+                            @include('includes.post_card')
 
-                            </div>
                         </div>
-                    @endforeach
+                    </div>
+                @endforeach
 
             </div>
         </div>
 
         <script>
-            /* When the user clicks on the button,
-            toggle between hiding and showing the dropdown content */
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }

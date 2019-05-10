@@ -15,14 +15,8 @@
 </template>
 
 <script>
-    import {mapGetters} from 'vuex'
-    import posts from '../components/Posts'
-
     export default {
         name: "Searchbar",
-        components: {
-            posts
-        },
         data() {
             return {
                 query: '',

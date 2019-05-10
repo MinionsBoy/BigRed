@@ -13,7 +13,7 @@ let actions = {
         })
     },
     GET_POSTS({commit}) {
-        axios.get('/api/get')
+        axios.get('/api/posts')
             .then(res => {
                 {
                     commit('SET_POSTS', res.data)

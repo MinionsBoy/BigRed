@@ -3,12 +3,14 @@
 namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;
-use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
-use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Broadcasting\PresenceChannel;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class SearchEvent implements ShouldBroadcastNow
+class SearchEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -20,9 +22,8 @@ class SearchEvent implements ShouldBroadcastNow
 
     public $posts;
 
-    public function __construct($posts)
+    public function __construct()
     {
-        //
         $this->posts = $posts;
     }
 
@@ -30,10 +31,6 @@ class SearchEvent implements ShouldBroadcastNow
      * Get the channels the event should broadcast on.
      *
      * @return \Illuminate\Broadcasting\Channel|array
-     */
-
-    /**
-     * @return string
      */
     public function broadcastAs()
     {

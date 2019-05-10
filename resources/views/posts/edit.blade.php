@@ -35,13 +35,12 @@
                     <h4 class="col-sm-12">Description</h4>
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                        <textarea class="form-control" id="description" name="description" rows="3">{{old('description', isset($post->description)?$post->description:null)}}
-                        </textarea>
+                        <textarea class="form-control" id="description" name="description" rows="3">{{old('description', isset($post->description)?$post->description:null)}}</textarea>
                         </div>
                     </div><br>
 
                         <div class="col-md-4">
-                            <div class="well">
+                            {{--<div class="well">--}}
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -63,7 +62,7 @@
 
                                 </div>
                             </div>
-                        </div>
+                        {{--</div>--}}
                     </div>
                 </form>
         </form>

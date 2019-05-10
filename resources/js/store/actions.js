@@ -23,6 +23,6 @@ let actions = {
                 console.log(err)
             })
     }
-}
+};
 
 export default actions

@@ -16,9 +16,9 @@ use Illuminate\Http\Request;
 
 Auth::routes();
 
-
-Route::get('search', 'PostController@search');
-Route::get('get', 'PostController@get');
+//
+//Route::get('search', 'PostController@search');
+//Route::get('get', 'PostController@get');
 
 Route::get('/', function () {
     return view('search');
